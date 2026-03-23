@@ -3,7 +3,7 @@ JAVA - PBO Barra Ahza Fakhrullah 023
 ## deskripsi kasus
 > Dalam sebuah organisasi/kepanitiaan atau bahkan sekedar kelompok belajar kecil biasanya terdapat perbedaan tugas yang dikerjakan oleh masing masing individu hal tersebut bisanya menjadi pemicu ketimpangan tugas yang dapat dirasakan oleh beberapa anggota kelompok itu sendiri, maka dari itu code ini bertujuan untuk memanage dan menghitung bobot tugas dari masing masing anggota yang dilengkapi dengan pengingat deadline dengan trigger sisa hari.
 ## class diagram
-![Output](diagram%20mermaid.png)
+![Output](../diagram%20mermaid.png)
 ## kode java 
 ```java
 
@@ -155,23 +155,23 @@ public class KalkulatorTugas {
 ## OUTPUT
 `MENU`
 
-![Output](menu.png)
+![Output](../menu.png)
 
 `OPSI 1`
 
-![Output](pil1.png)
+![Output](../pil1.png)
 
 `OPSI 2`
 
-![Output](pil2.png)
+![Output](../pil2.png)
 
 `OPSI 3`
 
-![Output](pil3.png)
+![Output](../pil3.png)
 
 `OPSI 4`
 
-![Output](pil4.png)
+![Output](../pil4.png)
 
 ## prinsip oop
 **ABSTRACTION**
