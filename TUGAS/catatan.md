@@ -258,3 +258,25 @@ public void tampilkanProfil() {
     System.out.println("ANGGOTA: " + nama + " (" + nrp + ") | Skor: " + hitungSkorPerforma());
 } }
 ```
+## KEUNIKAN PROGRAM
+Kode ini punya sistem bobot tugas `(bobot 1-10)` yang langsung dikonversi jadi `skor performa (totalBobot * 2)`. Artinya bukan cuma ngitung jumlah tugas, tapi staff yang pegang tugas berat skornya otomatis lebih tinggi, jadi perbedaan beban kerja antar anggota bisa langsung keliatan dari angka skornya.
+``` java
+public double hitungSkorPerforma() {
+    int totalBobot = 0;
+    for (int i = 0; i < jumlahTugas; i++) {
+        totalBobot += daftarTugas[i].bobot; // bukan cuma hitung jumlah, tapi beratnya
+    }
+    return totalBobot * 2;
+}
+```
+Selain itu ada sistem deadline warning lewat `sisaHari <= 3` yang otomatis kasih tanda `[!] MEPET DL NIH` jadi bisa langsung lihat siapa yang tugasnya mau deadline tapi belum selesai, dan bisa redistribusi tugas sebelum terlambat.
+``` java
+String status = (t.sisaHari <= 3) ? "[!] MEPET DL NIH " : "[^] MASIH AMANN   ";
+```
+Dan karena tiap staff dibatasi `maksimal 5 tugas`, kode ini secara tidak langsung mendorong distribusi tugas yang lebih merata, satu orang tidak bisa dibebani tugas tanpa batas, sehingga dipaksa menyebar tugas ke anggota lain kalau salah satu sudah penuh.
+```  java
+public void tambahTugas(String nama, int bbt, int hari) {
+    if (jumlahTugas < 5) { ... }
+    else { System.out.println("kebanyakan tugas woii"); }
+}
+```
